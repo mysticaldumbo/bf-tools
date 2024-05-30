@@ -1,0 +1,31 @@
+# bf-tools
+some pre-built commands for working with brainfuck programs.
+## install
+1. if you haven't already, install mingw.
+2. run the following in the terminal:
+```bash
+git clone https://www.github.com/mysticaldumbo/bf-tools.git
+cd bf-tools
+g++ bf.cpp -o bf.exe
+g++ bfc.cpp -o bfc.exe
+```
+3. add the bf-tools folder to your path.
+## features
+as of now, this only supports 2 commands, them being bf and  bfc. here's how they work:
+### bf
+bf simply runs a .bf file.<br/>
+usage:
+```bash
+bf example.bf
+```
+### bfc
+bf simply compiles a .bf file.<br/>
+usage:
+```bash
+bfc example.bf
+```
+## how it works
+### bf
+bf uses a c++ file to read each memory cell of the brainfuck program and output whatever the brainfuck program wants it to.
+### bfc
+bfc uses a c++ file to read each memory cell and create a temporary c file where it uses c code to add each braifuck memory cell and then uses gcc to compile the c file into exe, effectively creating a compiled brainfuck program.
